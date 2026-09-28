@@ -6,4 +6,5 @@
 size_t my_strlen(const char *);
 size_t	my_strlen(const char *);
 char	*my_strcpy(char *, const char *);
+char	*my_strncpy(char *, const char *, size_t);
 #endif
