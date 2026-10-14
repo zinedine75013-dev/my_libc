@@ -11,4 +11,5 @@ char	*my_strcat(char *, const char *);
 char	*my_strncat(char *, const char *, size_t);
 int	my_strcmp(const char *, const char *);
 int	my_strncmp(const char *, const char *, size_t);
+char	*my_strchr(const char *, int);
 #endif
