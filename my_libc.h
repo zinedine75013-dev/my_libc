@@ -19,4 +19,5 @@ void    *my_memcpy(void *, const void *, size_t);
 void    *my_memmove(void *, const void *, size_t);
 int      my_memcmp(const void *b1, const void *b2, size_t len);
 void    *my_memchr(const void *b, int c, size_t len);
+char	*my_strdup(const char *);
 #endif
