@@ -1,7 +1,7 @@
 NAME    = my_libc.a
 CC      = cc
 CFLAGS  = -Wall -Wextra -Werror
-SRC     = my_strlen.c my_strcpy.c my_strncpy.c my_strcat.c my_strncat.c my_strcmp.c my_strncmp.c my_strchr.c my_strrchr.c
+SRC     = my_strlen.c my_strcpy.c my_strncpy.c my_strcat.c my_strncat.c my_strcmp.c my_strncmp.c my_strchr.c my_strrchr.c my_strstr
 OBJ     = $(SRC:.c=.o)
 
 all: $(NAME)

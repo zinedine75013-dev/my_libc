@@ -13,4 +13,5 @@ int	my_strcmp(const char *, const char *);
 int	my_strncmp(const char *, const char *, size_t);
 char	*my_strchr(const char *, int);
 char    *my_strrchr(const char *, int);
+char    *my_strstr(const char *, const char *)
 #endif
