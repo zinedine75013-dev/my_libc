@@ -17,7 +17,8 @@ char    *my_strstr(const char *, const char *);
 void    *my_memset(void *, int, size_t);
 void    *my_memcpy(void *, const void *, size_t);
 void    *my_memmove(void *, const void *, size_t);
-int      my_memcmp(const void *b1, const void *b2, size_t len);
-void    *my_memchr(const void *b, int c, size_t len);
+int      my_memcmp(const void *, const void *, size_t);
+void    *my_memchr(const void *, int, size_t);
 char	*my_strdup(const char *);
+char	*my_strtok(char *, const char *);
 #endif
