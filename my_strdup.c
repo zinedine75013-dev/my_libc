@@ -1,38 +1,25 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 #include "my_libc.h"
 
-static void
-check(const char *s)
+char *
+my_strdup(const char *s)
 {
 	char *copy;
+	size_t len;
+	size_t i;
 
-	copy = my_strdup(s);
-	if (copy == NULL) {
-		printf("\"%s\" : NULL (KO)\n", s);
-		return;
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	copy = malloc(len + 1);
+	if (copy == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len) {
+		copy[i] = s[i];
+		i++;
 	}
-	printf("\"%s\" -> \"%s\" (%s)\n", s, copy,
-	    strcmp(copy, s) == 0 && copy != s ? "OK" : "KO");
-	free(copy);
-}
-
-int
-main(void)
-{
-	char text[] = "hello";
-	char *copy;
-
-	check("hello");
-	check("");
-	check("une phrase un peu plus longue");
-	copy = my_strdup(text);
-	if (copy != NULL) {
-		copy[0] = 'J';
-		printf("independance : %s / %s (%s)\n", text, copy,
-		    strcmp(text, "hello") == 0 ? "OK" : "KO");
-		free(copy);
-	}
-	return (0);
+	copy[i] = '\0';
+	return (copy);
 }
